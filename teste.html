@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Minha Loja</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container header-flex">
+      <div class="logo-container">
+        <h1 class="logo">Elegance<span>Store</span></h1>
+        <p class="logo-subtitle">Moda & Estilo</p>
+      </div>
+      <nav>
+        <button id="show-cart" aria-label="Ver carrinho">
+          <i class="fas fa-shopping-cart"></i>
+          <span id="cart-count">0</span>
+          <span class="cart-text">Carrinho</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-flex">
+    <section id="products" class="products-grid">
+      <!-- Produtos serão renderizados aqui -->
+    </section>
+
+    <aside id="cart-details" class="cart-sidebar hidden" aria-label="Carrinho de compras">
+      <div class="cart-header">
+        <h2><i class="fas fa-shopping-bag"></i> Seu Carrinho</h2>
+        <button id="close-cart" aria-label="Fechar carrinho">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="cart-content">
+        <ul id="cart-items" class="cart-items-list"></ul>
+      </div>
+
+      <div class="cart-footer">
+        <div class="cart-summary">
+          <p>Subtotal: <span id="cart-total">R$ 0,00</span></p>
+          <small>Frete calculado no checkout</small>
+        </div>
+        <button class="btn btn-checkout">Finalizar Compra</button>
+        <button class="btn btn-continue">Continuar Comprando</button>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>EleganceStore</h3>
+          <p>Sua loja de moda premium com as melhores marcas e tendências.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Links Úteis</h3>
+          <ul>
+            <li><a href="#">Sobre Nós</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Política de Troca</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Redes Sociais</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 EleganceStore - Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="notification" id="notification"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
