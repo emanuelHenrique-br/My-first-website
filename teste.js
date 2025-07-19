@@ -120,9 +120,8 @@ function hideCartDetails() {
   document.body.style.overflow = "auto";
 }
 
-// Event listeners corrigidos
 showCartBtn.addEventListener("click", (e) => {
-  e.stopPropagation(); // Impede o clique de "vazar"
+  e.stopPropagation(); 
   showCartDetails();
 });
 
@@ -131,14 +130,12 @@ closeCartBtn.addEventListener("click", (e) => {
   hideCartDetails();
 });
 
-// Fechar carrinho ao clicar fora, mas sem conflito
 document.addEventListener("click", (e) => {
   if (!cartDetails.classList.contains("hidden") && !cartDetails.contains(e.target)) {
     hideCartDetails();
   }
 });
 
-// Inicialização
 window.addEventListener("load", () => {
   renderProducts();
   updateCartDisplay();
